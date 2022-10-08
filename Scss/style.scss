@@ -1,0 +1,98 @@
+@import "variables";
+@import "reset";
+body {
+  background-color: $dark-third;
+}
+nav {
+  background-color: $dark-primary;
+  height: 4rem;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: red;
+  height: calc(100vh - 4rem);
+}
+.todo-list {
+  width: min(900px, 100%);
+  min-height: 500px;
+  // margin: auto;
+  border-radius: 1rem;
+  background-color: $light-primary;
+  height: auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  &__input {
+    display: flex;
+    column-gap: 0.5em;
+    align-items: center;
+    .btn {
+      cursor: pointer;
+      color: $light-primary;
+      font-weight: bold;
+      background-color: blueviolet;
+      padding: 0.5em;
+      width: max(110px, 20%);
+      border: none;
+      border-radius: 5px;
+      &:hover {
+        background-color: blue;
+      }
+    }
+    &__fourm {
+      width: 100%;
+      border: none;
+      padding: 0.5em 0.3em;
+      color: $dark-primary;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: $dark-third;
+      }
+    }
+  }
+  &__title {
+    font-weight: bold;
+    color: $dark-primary;
+  }
+  //Tasks
+  &__tasks {
+    &__task {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding: 0 0.5em;
+      color: $light-primary;
+      background-color: $dark-primary;
+      min-height: 4rem;
+      border-radius: 0.5rem;
+      justify-content: flex-end;
+      &__text {
+        // background-color: blue;
+        margin-right: auto;
+      }
+      .btn {
+        cursor: pointer;
+        border: none;
+        background-color: $dark-primary;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .edit {
+        color: green;
+      }
+      .delete {
+        color: red;
+      }
+    }
+  }
+}
+.footer {
+  height: 300px;
+  background-color: $dark-primary;
+}
